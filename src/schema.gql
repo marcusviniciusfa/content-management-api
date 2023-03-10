@@ -1,0 +1,128 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """Example field (placeholder)"""
+  id: ID!
+
+  """Example field (placeholder)"""
+  name: String!
+
+  """Example field (placeholder)"""
+  isAdmin: Boolean!
+}
+
+type Content {
+  """Example field (placeholder)"""
+  id: ID!
+
+  """Example field (placeholder)"""
+  name: String!
+
+  """Example field (placeholder)"""
+  description: String!
+
+  """Example field (placeholder)"""
+  type: String!
+}
+
+type DetailsView {
+  """Example field (placeholder)"""
+  contentId: String!
+
+  """Example field (placeholder)"""
+  userId: String!
+
+  """Example field (placeholder)"""
+  createdAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  contents: [Content!]!
+  content(id: String!): Content!
+  users: [User!]!
+  user(id: String!): User!
+  detailsViews: [DetailsView!]!
+  detailsView(id: String!): DetailsView!
+}
+
+type Mutation {
+  createContent(createContentInput: CreateContentInput!): Content!
+  updateContent(updateContentInput: UpdateContentInput!): Content!
+  removeContent(id: String!): Content!
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: String!): User!
+  createDetailsView(createDetailsViewInput: CreateDetailsViewInput!): DetailsView!
+  updateDetailsView(updateDetailsViewInput: UpdateDetailsViewInput!): DetailsView!
+  removeDetailsView(id: String!): DetailsView!
+}
+
+input CreateContentInput {
+  """Example field (placeholder)"""
+  userId: String!
+
+  """Example field (placeholder)"""
+  name: String!
+
+  """Example field (placeholder)"""
+  description: String!
+
+  """Example field (placeholder)"""
+  type: String!
+}
+
+input UpdateContentInput {
+  """Example field (placeholder)"""
+  userId: String
+
+  """Example field (placeholder)"""
+  name: String
+
+  """Example field (placeholder)"""
+  description: String
+
+  """Example field (placeholder)"""
+  type: String
+  id: String!
+}
+
+input CreateUserInput {
+  """Example field (placeholder)"""
+  name: Int!
+
+  """Example field (placeholder)"""
+  isAdmin: Boolean!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  name: Int
+
+  """Example field (placeholder)"""
+  isAdmin: Boolean
+  id: String!
+}
+
+input CreateDetailsViewInput {
+  """Example field (placeholder)"""
+  userId: String!
+
+  """Example field (placeholder)"""
+  contentId: String!
+}
+
+input UpdateDetailsViewInput {
+  """Example field (placeholder)"""
+  userId: String
+
+  """Example field (placeholder)"""
+  contentId: String
+  id: String!
+}

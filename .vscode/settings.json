@@ -1,0 +1,18 @@
+{
+  "material-icon-theme.activeIconPack": "nest",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll.eslint": true
+    }
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+  },
+  "dotenv.enableAutocloaking": false
+}
